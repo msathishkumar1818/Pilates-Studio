@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Member Portal Dashboard — Pilates Studio</title>
+  <meta name="description"
+    content="Pilates Studio Member Portal. Book reformer slots by instructor and skill tier, track class pack usage meters, and manage subscription auto-renewal.">
+  <link rel="icon" type="image/png" href="assets/images/icons/logo.png">
+
+  <!-- External Stylesheets (Zero Inline CSS) -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body class="dashboard-page-body">
+
+  <!-- =========================================================================
+       1. Branded Preloader
+       ========================================================================= -->
+  <div id="page-preloader" aria-label="Loading Member Dashboard">
+    <div class="loader-brand-wrapper">
+      <div class="loader-logo-container">
+        <div class="loader-ring"></div>
+        <img src="assets/images/icons/logo.png" alt="Pilates Studio Logo" class="loader-logo-img">
+      </div>
+      <h2 class="loader-title">Pilates Studio</h2>
+      <p class="loader-sub">Member Portal &bull; Practice Dashboard</p>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       2. Sticky Top Navigation Bar (Directly Matching Reference UI)
+       ========================================================================= -->
+  <header class="dash-topbar" id="dash-topbar">
+    <div class="dash-topbar-left">
+      <!-- Brand Logo + Portal Name -->
+      <a href="index.html" class="dash-brand-link" aria-label="Pilates Studio Home">
+        <img src="assets/images/icons/logo.png" alt="Pilates Studio Logo" class="dash-brand-logo">
+        <div class="dash-brand-text">
+          <span class="dash-brand-title">Pilates Studio</span>
+          <span class="dash-brand-sub">Mindful Movement</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="dash-topbar-right">
+      <!-- Live Status Badge (Green dot from Reference Image) -->
+      <div class="dash-status-badge">
+        <span class="dash-status-dot"></span>
+        <span>Studio Live &bull; 6 Bays Active</span>
+      </div>
+
+      <!-- Log Out Button (Red pill from Reference Image) -->
+      <a href="login.html" class="dash-logout-btn" aria-label="Log out of member portal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" aria-hidden="true">
+          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+          <polyline points="16 17 21 12 16 7"></polyline>
+          <line x1="21" y1="12" x2="9" y2="12"></line>
+        </svg>
+        <span>Log Out</span>
+      </a>
+
+      <!-- RTL Toggle -->
+      <button type="button" class="action-icon-btn rtl-toggle-btn" aria-label="Switch text direction">
+        <span class="rtl-label">RTL</span>
+      </button>
+
+      <!-- Dark / Light Theme Toggle -->
+      <button type="button" class="action-icon-btn theme-toggle-btn" aria-label="Switch color theme">
+        <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+
+      <!-- Mobile Sidebar Toggle (Placed on Right) -->
+      <button type="button" class="action-icon-btn dash-mobile-sidebar-toggle" id="dash-sidebar-toggle"
+        aria-label="Toggle navigation sidebar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" aria-hidden="true">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Sidebar Backdrop -->
+  <div class="mobile-menu-backdrop" id="dash-sidebar-backdrop"></div>
+
+  <!-- =========================================================================
+       3. Main App Grid Layout (Sidebar + Content Shell)
+       ========================================================================= -->
+  <div class="dash-layout-container">
+
+    <!-- Left Sidebar (Directly Matching Reference UI) -->
+    <aside class="dash-sidebar" id="dash-sidebar" aria-label="Member Navigation Sidebar">
+      <!-- Mobile Drawer Header -->
+      <div class="dash-sidebar-drawer-header">
+        <div class="dash-sidebar-brand-summary">
+          <img src="assets/images/icons/logo.png" alt="Pilates Studio Logo" class="dash-sidebar-logo-img">
+          <div>
+            <span class="dash-brand-title">Pilates Studio</span>
+            <span class="dash-brand-sub">Client Portal</span>
+          </div>
+        </div>
+        <button type="button" class="dash-sidebar-close-btn" id="dash-sidebar-close" aria-label="Close navigation menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Drawer Preferences & Status -->
+      <div class="dash-sidebar-mobile-controls">
+        <div class="dash-sidebar-pref-row">
+          <span class="dash-pref-label">Preferences</span>
+          <div class="dash-pref-actions">
+            <button type="button" class="dash-pref-pill rtl-toggle-btn" aria-label="Switch text direction">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" style="width: 13px; height: 13px;" aria-hidden="true">
+                <polyline points="16 3 21 3 21 8"></polyline>
+                <line x1="4" y1="20" x2="21" y2="3"></line>
+                <polyline points="21 16 21 21 16 21"></polyline>
+                <line x1="15" y1="15" x2="21" y2="21"></line>
+                <line x1="4" y1="4" x2="9" y2="9"></line>
+              </svg>
+              <span class="rtl-label">RTL</span>
+            </button>
+            <button type="button" class="dash-pref-pill theme-toggle-btn" aria-label="Switch color theme">
+              <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" style="width: 13px; height: 13px;" aria-hidden="true">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+              <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" style="width: 13px; height: 13px;" aria-hidden="true">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+              <span class="theme-text-label">Theme</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="dash-status-badge">
+          <span class="dash-status-dot"></span>
+          <span>Studio Live &bull; 6 Bays Active</span>
+        </div>
+      </div>
+
+      <div class="dash-nav-group">
+        <!-- 1. Overview (Active Tab) -->
+        <a href="#overview-section" class="dash-nav-item active">
+          <div class="dash-nav-item-left">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="3" width="7" height="7"></rect>
+              <rect x="14" y="3" width="7" height="7"></rect>
+              <rect x="14" y="14" width="7" height="7"></rect>
+              <rect x="3" y="14" width="7" height="7"></rect>
+            </svg>
+            <span>Overview</span>
+          </div>
+        </a>
+
+        <!-- 2. Book Class Slot -->
+        <a href="#booking-matrix" class="dash-nav-item">
+          <div class="dash-nav-item-left">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            <span>Schedule Slot</span>
+          </div>
+        </a>
+
+        <!-- 3. Class Pack Usage -->
+        <a href="#pack-usage" class="dash-nav-item">
+          <div class="dash-nav-item-left">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+            <span>Class Pack Usage</span>
+          </div>
+          <span class="dash-badge">8 left</span>
+        </a>
+
+        <!-- 4. Instructors & Levels -->
+        <a href="#active-slots" class="dash-nav-item">
+          <div class="dash-nav-item-left">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+            <span>Mentors & Levels</span>
+          </div>
+          <span class="dash-badge">3</span>
+        </a>
+
+        <!-- 5. Payment & Renewal -->
+        <a href="#membership-renewal" class="dash-nav-item">
+          <div class="dash-nav-item-left">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+              <line x1="1" y1="10" x2="23" y2="10"></line>
+            </svg>
+            <span>Payment & Renewal</span>
+          </div>
+        </a>
+
+        <!-- 6. Public Website -->
+        <a href="index.html" class="dash-nav-item">
+          <div class="dash-nav-item-left">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+            <span>Public Website</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Bottom Member Status Card (Matching Reference UI) -->
+      <div class="dash-sidebar-bottom-card">
+        <div class="dash-facility-label">MEMBER STATUS</div>
+        <div class="dash-facility-name">Elena Rostova</div>
+        <div class="dash-facility-status">
+          <span class="dash-facility-dot"></span>
+          <span>Unlimited Sanctuary Tier</span>
+        </div>
+      </div>
+
+      <!-- Sidebar Logout Action (Visible on Mobile Menu) -->
+      <a href="login.html" class="dash-sidebar-logout-btn" aria-label="Log out of member portal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" aria-hidden="true">
+          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+          <polyline points="16 17 21 12 16 7"></polyline>
+          <line x1="21" y1="12" x2="9" y2="12"></line>
+        </svg>
+        <span>Log Out</span>
+      </a>
+    </aside>
+
+    <!-- Main Content Area (Directly Matching Reference UI) -->
+    <main class="dash-main-content" id="overview-section">
+
+      <!-- =====================================================================
+           1. Hello Greeting Banner (Matching Reference Image)
+           ===================================================================== -->
+      <section class="dash-banner" aria-label="Welcome Banner">
+        <div>
+          <h1 class="dash-banner-title">Hello, Elena</h1>
+          <p class="dash-banner-meta">
+            Unlimited Sanctuary Pass &bull; Member ID: PS-2026-9042 &bull; Preferred Mentor: Claire Vance
+          </p>
+        </div>
+        <a href="#booking-matrix" class="dash-banner-cta">
+          <span>+ Schedule Class Slot</span>
+        </a>
+      </section>
+
+      <!-- =====================================================================
+           2. Overview Section Header & 4 Even KPI Metric Cards (Matching Reference)
+           ===================================================================== -->
+      <section aria-labelledby="overview-heading">
+        <div class="dash-section-header">
+          <h2 class="dash-section-title" id="overview-heading">Overview</h2>
+          <p class="dash-section-sub">Everything active on your reformer practice account right now.</p>
+        </div>
+
+        <div class="dash-kpi-grid">
+          <!-- Metric 1: Remaining Passes (Blue) -->
+          <div class="dash-kpi-card">
+            <span class="dash-kpi-label">REMAINING PASSES</span>
+            <span class="dash-kpi-number">8</span>
+            <span class="dash-kpi-subtext">Active 10-Class Practice Pack</span>
+          </div>
+
+          <!-- Metric 2: Scheduled Visits (Amber) -->
+          <div class="dash-kpi-card">
+            <span class="dash-kpi-label">SCHEDULED VISITS</span>
+            <span class="dash-kpi-number">2</span>
+            <span class="dash-kpi-subtext">Upcoming reformer reservations</span>
+          </div>
+
+          <!-- Metric 3: Practice Hours (Green) -->
+          <div class="dash-kpi-card">
+            <span class="dash-kpi-label">PRACTICE HOURS</span>
+            <span class="dash-kpi-number">36</span>
+            <span class="dash-kpi-subtext">Completed mindful sessions</span>
+          </div>
+
+          <!-- Metric 4: Renewal Countdown (Purple) -->
+          <div class="dash-kpi-card">
+            <span class="dash-kpi-label">PACK RENEWAL</span>
+            <span class="dash-kpi-number">14</span>
+            <span class="dash-kpi-subtext">Days until automated cycle</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================================
+           3. Active Service Slots & Next Scheduled Visit (2-Col Grid from Reference)
+           ===================================================================== -->
+      <section class="dash-split-grid" id="active-slots" aria-label="Active Class Slots and Next Visit">
+        <!-- Left: Active Booked Slots -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Active Booked Slots</h3>
+            <a href="#booking-matrix" class="dash-card-link">View all slots &rarr;</a>
+          </div>
+
+          <div class="dash-slot-list">
+            <!-- Slot 1 -->
+            <div class="dash-slot-item">
+              <div class="dash-slot-info-group">
+                <div class="dash-slot-meta-top">
+                  <span>SLOT-2026-8814 &bull; Bay 04</span>
+                  <span class="dash-slot-tag">LEVEL 2 &bull; FLOW</span>
+                </div>
+                <div class="dash-slot-name">Kinetic Carriage Progression</div>
+                <div class="dash-slot-instructor">Instructor: Claire Vance &bull; Mon 07:00&nbsp;AM</div>
+              </div>
+              <button type="button" class="dash-slot-action-btn">Reschedule</button>
+            </div>
+
+            <!-- Slot 2 -->
+            <div class="dash-slot-item">
+              <div class="dash-slot-info-group">
+                <div class="dash-slot-meta-top">
+                  <span>SLOT-2026-9920 &bull; Bay 02</span>
+                  <span class="dash-slot-tag">LEVEL 3 &bull; ATHLETIC</span>
+                </div>
+                <div class="dash-slot-name">High-Resistance Spring Jumpboard</div>
+                <div class="dash-slot-instructor">Instructor: Marcus Reid &bull; Thu 06:00&nbsp;PM</div>
+              </div>
+              <button type="button" class="dash-slot-action-btn">Reschedule</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Next Scheduled Visit (Matching Reference Date Tile) -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Next Scheduled Visit</h3>
+          </div>
+
+          <div class="dash-next-visit-box">
+            <!-- Date Badge -->
+            <div class="dash-date-badge">
+              <div class="dash-date-day">24</div>
+              <div class="dash-date-month">OCT</div>
+            </div>
+
+            <!-- Visit Details -->
+            <div class="dash-visit-details">
+              <div class="dash-visit-title">Classical Alignment</div>
+              <div class="dash-visit-sub">Master Mentor Marcus Reid &bull; 07:30 AM</div>
+              <div class="dash-visit-sub">Studio Chamber A &bull; Carriage Station 03</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================================
+           4. Interactive Class Slot Booking Matrix (By Instructor & Level)
+           ===================================================================== -->
+      <section class="dash-booking-section" id="booking-matrix" aria-label="Reserve Class Slots">
+        <div class="dash-section-header">
+          <h2 class="dash-section-title">Schedule Reformer Slot</h2>
+          <p class="dash-section-sub">Filter available reformer stations by skill level and master instructor.</p>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="booking-filter-wrapper">
+          <!-- Level Filter Group -->
+          <div class="booking-filter-group">
+            <span class="booking-filter-label">Level:</span>
+            <button type="button" class="filter-pill-btn active" data-filter-group="level" data-filter-value="all">All
+              Levels</button>
+            <button type="button" class="filter-pill-btn" data-filter-group="level" data-filter-value="level-1">Level
+              1</button>
+            <button type="button" class="filter-pill-btn" data-filter-group="level" data-filter-value="level-2">Level
+              2</button>
+            <button type="button" class="filter-pill-btn" data-filter-group="level" data-filter-value="level-3">Level
+              3</button>
+            <button type="button" class="filter-pill-btn" data-filter-group="level"
+              data-filter-value="private">Private</button>
+          </div>
+
+          <!-- Instructor Filter Group -->
+          <div class="booking-filter-group">
+            <span class="booking-filter-label">Instructor:</span>
+            <button type="button" class="filter-pill-btn active" data-filter-group="instructor"
+              data-filter-value="all">All Mentors</button>
+            <button type="button" class="filter-pill-btn" data-filter-group="instructor"
+              data-filter-value="claire">Claire Vance</button>
+            <button type="button" class="filter-pill-btn" data-filter-group="instructor"
+              data-filter-value="marcus">Marcus Reid</button>
+            <button type="button" class="filter-pill-btn" data-filter-group="instructor" data-filter-value="elena">Elena
+              Rostova</button>
+          </div>
+        </div>
+
+        <!-- Slot Cards Grid -->
+        <div class="slot-cards-grid">
+          <!-- Slot 1 -->
+          <div class="slot-booking-card" data-level="level-1" data-instructor="claire">
+            <div class="slot-header">
+              <span class="slot-level-badge">Level 1 &bull; Foundation</span>
+              <span class="slot-spots-left">&bull; 3 Bays Open</span>
+            </div>
+            <div>
+              <div class="slot-class-name">Classical Pelvic Alignment</div>
+              <div class="slot-instructor-name">Instructor: Claire Vance</div>
+            </div>
+            <div class="slot-time-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span>Tomorrow &bull; 06:30&nbsp;AM – 07:30&nbsp;AM</span>
+            </div>
+            <button type="button" class="slot-reserve-btn" aria-label="Reserve slot for Classical Pelvic Alignment">
+              <span>Reserve Slot</span>
+            </button>
+          </div>
+
+          <!-- Slot 2 -->
+          <div class="slot-booking-card" data-level="level-2" data-instructor="claire">
+            <div class="slot-header">
+              <span class="slot-level-badge">Level 2 &bull; Kinetic</span>
+              <span class="slot-spots-left">&bull; 2 Bays Open</span>
+            </div>
+            <div>
+              <div class="slot-class-name">Dynamic Carriage Flow</div>
+              <div class="slot-instructor-name">Instructor: Claire Vance</div>
+            </div>
+            <div class="slot-time-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span>Tomorrow &bull; 09:00&nbsp;AM – 10:00&nbsp;AM</span>
+            </div>
+            <button type="button" class="slot-reserve-btn" aria-label="Reserve slot for Dynamic Carriage Flow">
+              <span>Reserve Slot</span>
+            </button>
+          </div>
+
+          <!-- Slot 3 -->
+          <div class="slot-booking-card" data-level="level-3" data-instructor="marcus">
+            <div class="slot-header">
+              <span class="slot-level-badge">Level 3 &bull; Athletic</span>
+              <span class="slot-spots-left">&bull; 1 Bay Open</span>
+            </div>
+            <div>
+              <div class="slot-class-name">Overhead Trapeze Power</div>
+              <div class="slot-instructor-name">Instructor: Marcus Reid</div>
+            </div>
+            <div class="slot-time-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span>Tomorrow &bull; 05:30&nbsp;PM – 06:30&nbsp;PM</span>
+            </div>
+            <button type="button" class="slot-reserve-btn" aria-label="Reserve slot for Overhead Trapeze Power">
+              <span>Reserve Slot</span>
+            </button>
+          </div>
+
+          <!-- Slot 4 -->
+          <div class="slot-booking-card" data-level="level-2" data-instructor="elena">
+            <div class="slot-header">
+              <span class="slot-level-badge">Level 2 &bull; Flow</span>
+              <span class="slot-spots-left">&bull; 4 Bays Open</span>
+            </div>
+            <div>
+              <div class="slot-class-name">Spine Corrector Integration</div>
+              <div class="slot-instructor-name">Instructor: Elena Rostova</div>
+            </div>
+            <div class="slot-time-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span>Wednesday &bull; 08:00&nbsp;AM – 09:00&nbsp;AM</span>
+            </div>
+            <button type="button" class="slot-reserve-btn" aria-label="Reserve slot for Spine Corrector Integration">
+              <span>Reserve Slot</span>
+            </button>
+          </div>
+
+          <!-- Slot 5 -->
+          <div class="slot-booking-card" data-level="private" data-instructor="marcus">
+            <div class="slot-header">
+              <span class="slot-level-badge">Private &bull; Duet</span>
+              <span class="slot-spots-left">&bull; Private Chamber</span>
+            </div>
+            <div>
+              <div class="slot-class-name">Master Biomechanical on-1</div>
+              <div class="slot-instructor-name">Instructor: Marcus Reid</div>
+            </div>
+            <div class="slot-time-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span>Wednesday &bull; 11:30&nbsp;AM – 12:30&nbsp;PM</span>
+            </div>
+            <button type="button" class="slot-reserve-btn" aria-label="Reserve private 1-on-1 slot">
+              <span>Reserve Slot</span>
+            </button>
+          </div>
+
+          <!-- Slot 6 -->
+          <div class="slot-booking-card" data-level="level-1" data-instructor="elena">
+            <div class="slot-header">
+              <span class="slot-level-badge">Level 1 &bull; Core</span>
+              <span class="slot-spots-left">&bull; 5 Bays Open</span>
+            </div>
+            <div>
+              <div class="slot-class-name">Postural Footwork & Breath</div>
+              <div class="slot-instructor-name">Instructor: Elena Rostova</div>
+            </div>
+            <div class="slot-time-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span>Thursday &bull; 07:00&nbsp;AM – 08:00&nbsp;AM</span>
+            </div>
+            <button type="button" class="slot-reserve-btn" aria-label="Reserve slot for Postural Footwork">
+              <span>Reserve Slot</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================================
+           5. Class Pack Usage Progress & Membership Renewal (2-Col Grid)
+           ===================================================================== -->
+      <section class="dash-pack-renewal-grid" id="pack-usage" aria-label="Class Pack Usage and Renewal Management">
+        <!-- Card 1: Pack Usage Progress Meter -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Class Pack Usage Meter</h3>
+            <a href="membership.html" class="dash-card-link">Top up pass &rarr;</a>
+          </div>
+
+          <div>
+            <div class="pack-progress-header">
+              <span class="pack-progress-title">8 of 10 Sessions Remaining</span>
+              <span class="pack-progress-pct">80% Available</span>
+            </div>
+
+            <!-- Visual Progress Meter -->
+            <div class="progress-track" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-fill progress-fill-80"></div>
+            </div>
+
+            <div class="progress-legend">
+              <span>2 Sessions Attended</span>
+              <span>Expires in 164 Days</span>
+            </div>
+
+            <div class="pack-breakdown-list">
+              <div class="pack-breakdown-row">
+                <span>Classical Foundation Used:</span>
+                <strong>1 Session</strong>
+              </div>
+              <div class="pack-breakdown-row">
+                <span>Kinetic Progression Used:</span>
+                <strong>1 Session</strong>
+              </div>
+              <div class="pack-breakdown-row">
+                <span>Athletic Mastery Used:</span>
+                <strong>0 Sessions</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Membership Auto-Renewal & Payment Management -->
+        <div class="dash-card" id="membership-renewal">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Membership & Payment Renewal</h3>
+          </div>
+
+          <div>
+            <div class="renewal-plan-row">
+              <span class="renewal-plan-title">Unlimited Sanctuary Plan</span>
+              <span class="renewal-plan-price">$285 / mo</span>
+            </div>
+            <p class="renewal-plan-date">
+              Next scheduled auto-renewal cycle: November 02, 2026
+            </p>
+
+            <!-- Auto-Renewal Toggle Switch (From Requirements) -->
+            <div class="renewal-toggle-row">
+              <div>
+                <div class="renewal-title-bold">Automatic Renewal</div>
+                <div id="renewal-status-text" class="renewal-status-label">Active Auto-Renewal ($285/mo)</div>
+              </div>
+              <label class="toggle-switch-label" for="renewal-checkbox">
+                <input type="checkbox" id="renewal-checkbox" class="toggle-checkbox" checked>
+                <span class="toggle-switch"></span>
+              </label>
+            </div>
+
+            <!-- Card on File Info -->
+            <div class="card-file-row">
+              <div class="card-file-left">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" class="card-icon" aria-hidden="true">
+                  <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                  <line x1="1" y1="10" x2="23" y2="10"></line>
+                </svg>
+                <span>Visa ending in &bull;&bull;&bull;&bull; 4829</span>
+              </div>
+              <button type="button" class="dash-card-link">Edit Card</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- External JavaScript (Zero Inline JS) -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

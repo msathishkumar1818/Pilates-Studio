@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Our Studio — Pilates Studio Story & Classical Lineage</title>
+  <meta name="description"
+    content="Discover the philosophy, master educators, and architectural sanctuary behind Pilates Studio. Dedicated to authentic reformer Pilates and postural longevity.">
+  <link rel="icon" type="image/png" href="assets/images/icons/logo.png">
+
+  <!-- External Stylesheets (Zero Inline CSS) -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+
+  <!-- =========================================================================
+       1. Branded Preloader
+       ========================================================================= -->
+  <div id="page-preloader" aria-label="Loading Pilates Studio">
+    <div class="loader-brand-wrapper">
+      <div class="loader-logo-container">
+        <div class="loader-ring"></div>
+        <img src="assets/images/icons/logo.png" alt="Pilates Studio Logo" class="loader-logo-img">
+      </div>
+      <h2 class="loader-title">Pilates Studio</h2>
+      <p class="loader-sub">Our Story &bull; Authentic Lineage</p>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       2. Fixed Slim Single-Line Header (Unified 1200px Container)
+       ========================================================================= -->
+  <header class="site-header" id="site-header">
+    <div class="header-container">
+      <!-- Logo + Brand Title -->
+      <a href="index.html" class="brand-link" aria-label="Pilates Studio Homepage">
+        <img src="assets/images/icons/logo.png" alt="Pilates Studio Logo" class="brand-logo-img">
+        <div class="brand-text-group">
+          <span class="brand-name">Pilates Studio</span>
+          <span class="brand-subtitle">Mindful Movement</span>
+        </div>
+      </a>
+
+      <!-- Exactly 6 Desktop Primary Navigation Items (One Line) -->
+      <nav class="desktop-nav" aria-label="Primary Desktop Navigation">
+        <ul class="nav-list">
+          <!-- 1. Home with Click-Only Dropdown -->
+          <li class="nav-item has-dropdown">
+            <button type="button" class="nav-link dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              <span>Home</span>
+              <svg class="dropdown-toggle-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                  clip-rule="evenodd" />
+              </svg>
+            </button>
+            <ul class="dropdown-menu" aria-label="Home Variations">
+              <li>
+                <a href="index.html" class="dropdown-link">
+                  <span>Home 1</span>
+                  <span class="dropdown-badge">Classic</span>
+                </a>
+              </li>
+              <li>
+                <a href="home-2.html" class="dropdown-link">
+                  <span>Home 2</span>
+                  <span class="dropdown-badge">Editorial</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- 2. About (Active) -->
+          <li class="nav-item">
+            <a href="about.html" class="nav-link active">About</a>
+          </li>
+
+          <!-- 3. Classes -->
+          <li class="nav-item">
+            <a href="classes.html" class="nav-link">Classes</a>
+          </li>
+
+          <!-- 4. Memberships -->
+          <li class="nav-item">
+            <a href="membership.html" class="nav-link">Memberships</a>
+          </li>
+
+          <!-- 5. Dashboard -->
+          <li class="nav-item">
+            <a href="dashboard.html" class="nav-link">Dashboard</a>
+          </li>
+
+          <!-- 6. Contact (Directly Visible) -->
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Header Action Controls: RTL, Dark Mode, Compact Login & Primary CTA -->
+      <div class="header-actions">
+        <!-- RTL/LTR Toggle -->
+        <button type="button" class="action-icon-btn rtl-toggle-btn" aria-label="Switch text direction">
+          <span class="rtl-label">RTL</span>
+        </button>
+
+        <!-- Dark Mode Toggle (#000000 Strict Base) -->
+        <button type="button" class="action-icon-btn theme-toggle-btn" aria-label="Switch color theme">
+          <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- Compact Member Login Button -->
+        <a href="login.html" class="header-login-btn" aria-label="Member portal login">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+            <polyline points="10 17 15 12 10 7"></polyline>
+            <line x1="15" y1="12" x2="3" y2="12"></line>
+          </svg>
+          <span>Login</span>
+        </a>
+
+        <!-- Primary Header CTA Button -->
+        <a href="classes.html" class="header-cta-btn" aria-label="Book a reformer class">
+          <span>Book Class</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="mobile-toggle-btn" id="mobile-menu-toggle" aria-label="Open mobile menu"
+          aria-expanded="false" aria-controls="mobile-drawer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       3. Mobile Navigation Drawer & Accordion
+       ========================================================================= -->
+  <div class="mobile-menu-backdrop" id="mobile-backdrop"></div>
+
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation Menu">
+    <!-- Drawer Brand Header -->
+    <div class="drawer-header">
+      <div class="drawer-brand">
+        <img src="assets/images/icons/logo.png" alt="Pilates Studio Logo" class="drawer-brand-img">
+        <div>
+          <div class="drawer-brand-name">Pilates Studio</div>
+          <div class="drawer-brand-sub">Mindful Movement</div>
+        </div>
+      </div>
+      <button type="button" class="drawer-close-btn" id="mobile-drawer-close" aria-label="Close mobile menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" style="width: 20px; height: 20px;" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Drawer Controls (Dark Mode & RTL) -->
+    <div class="drawer-controls">
+      <span class="drawer-control-label">Preferences</span>
+      <div class="drawer-control-group">
+        <button type="button" class="action-icon-btn rtl-toggle-btn" aria-label="Switch text direction">
+          <span class="rtl-label">RTL</span>
+        </button>
+        <button type="button" class="action-icon-btn theme-toggle-btn" aria-label="Switch color theme">
+          <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Drawer Navigation List -->
+    <ul class="mobile-nav-list">
+      <!-- 1. Home with Mobile Accordion (Click only) -->
+      <li class="mobile-nav-item">
+        <button type="button" class="mobile-nav-link accordion-toggle" aria-expanded="false">
+          <span>Home</span>
+          <svg class="accordion-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd"
+              d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+              clip-rule="evenodd" />
+          </svg>
+        </button>
+        <ul class="mobile-submenu">
+          <li>
+            <a href="index.html" class="mobile-sub-link">
+              <span>Home 1 (Classic)</span>
+            </a>
+          </li>
+          <li>
+            <a href="home-2.html" class="mobile-sub-link">
+              <span>Home 2 (Editorial)</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- 2. About (Active) -->
+      <li class="mobile-nav-item">
+        <a href="about.html" class="mobile-nav-link active">About</a>
+      </li>
+
+      <!-- 3. Classes -->
+      <li class="mobile-nav-item">
+        <a href="classes.html" class="mobile-nav-link">Classes</a>
+      </li>
+
+      <!-- 4. Memberships -->
+      <li class="mobile-nav-item">
+        <a href="membership.html" class="mobile-nav-link">Memberships</a>
+      </li>
+
+      <!-- 5. Dashboard -->
+      <li class="mobile-nav-item">
+        <a href="dashboard.html" class="mobile-nav-link">Member Dashboard</a>
+      </li>
+
+      <!-- 6. Contact -->
+      <li class="mobile-nav-item">
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+      </li>
+    </ul>
+
+    <!-- Drawer Footer with CTA & Login Buttons -->
+    <div class="drawer-footer">
+      <a href="classes.html" class="mobile-cta-btn">
+        <span>Book Reformer Class</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" aria-hidden="true">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </a>
+      <a href="login.html" class="mobile-login-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" aria-hidden="true">
+          <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+          <polyline points="10 17 15 12 10 7"></polyline>
+          <line x1="15" y1="12" x2="3" y2="12"></line>
+        </svg>
+        <span>Member Portal Login</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       MAIN CONTENT: EXACTLY 5 CONTENT SECTIONS FOR INNER PAGE 01 (ABOUT)
+       ========================================================================= -->
+  <main class="main-content" id="main-content">
+
+    <!-- -----------------------------------------------------------------------
+         SECTION 01: MASTHEAD HERO (Background Image with Centered Text Overlay)
+         ----------------------------------------------------------------------- -->
+    <section class="page-hero-banner page-hero-about" id="about-masthead">
+      <div class="section-container">
+        <div class="page-hero-content">
+          <span class="page-hero-tagline">Our Studio Legacy</span>
+          <h1 class="page-hero-title">
+            Preserving the Pure Art of Classical Pilates
+          </h1>
+          <p class="page-hero-subtext">
+            Founded with an unwavering commitment to Joseph Pilates' original principles, our sanctuary combines
+            anatomical rigor with mindful restoration.
+          </p>
+          <div class="page-hero-badges">
+            <span class="page-hero-pill">Est. 2014</span>
+            <span class="page-hero-pill">Authentic Maple Apparatus</span>
+            <span class="page-hero-pill">PMA Certified Instructors</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- -----------------------------------------------------------------------
+         SECTION 02: CHRONOLOGICAL TIMELINE (Milestone Lineage)
+         ----------------------------------------------------------------------- -->
+    <section class="about-timeline-section" id="about-timeline">
+      <div class="section-container">
+        <div style="text-align: center; max-width: 650px; margin: 0 auto;">
+          <span class="section-tagline">Studio Journey</span>
+          <h2 class="section-heading">A Decade of Movement Evolution</h2>
+          <p class="section-subtext" style="margin: 0 auto;">
+            From an intimate single-cadillac private room to an internationally recognized sanctuary of classical
+            reformer education.
+          </p>
+        </div>
+
+        <div class="timeline-list">
+          <!-- Milestone 1 -->
+          <article class="timeline-row">
+            <div class="timeline-media-col">
+              <img src="assets/images/about/p23.jpg" alt="Apprentice training on classical wood reformer">
+            </div>
+            <div class="timeline-content-col">
+              <span class="timeline-year-pill">2014 &bull; The Apprenticeship</span>
+              <h3 class="timeline-heading">Foundational Classical Rigor</h3>
+              <p class="timeline-text">
+                Our founders completed intensive apprenticeships under second-generation elders in Munich and New York,
+                mastering authentic spring tensions, carriage pacing, and manual cueing.
+              </p>
+            </div>
+          </article>
+
+          <!-- Milestone 2 -->
+          <article class="timeline-row">
+            <div class="timeline-media-col">
+              <img src="assets/images/about/p24.jpg" alt="Architectural build of the sanctuary with custom reformers">
+            </div>
+            <div class="timeline-content-col">
+              <span class="timeline-year-pill">2019 &bull; The Sanctuary Build</span>
+              <h3 class="timeline-heading">Architectural Serenity Defined</h3>
+              <p class="timeline-text">
+                We designed our bespoke space with acoustic insulation, continuous circadian light channels, and twelve
+                handcrafted rock maple Balanced Body reformer units.
+              </p>
+            </div>
+          </article>
+
+          <!-- Milestone 3 -->
+          <article class="timeline-row">
+            <div class="timeline-media-col">
+              <img src="assets/images/about/p25.jpg" alt="Master certified instructor guiding member alignment">
+            </div>
+            <div class="timeline-content-col">
+              <span class="timeline-year-pill">2026 &bull; Master Academy</span>
+              <h3 class="timeline-heading">Longevity & Movement Science</h3>
+              <p class="timeline-text">
+                Today, our studio serves hundreds of dedicated practitioners, offering physician-recommended
+                rehabilitation, elite athletic conditioning, and continuing education.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- -----------------------------------------------------------------------
+         SECTION 03: STUDIO STANDARDS (Even 3-Card Architecture)
+         ----------------------------------------------------------------------- -->
+    <section class="about-standards-section" id="about-standards">
+      <div class="section-container">
+        <div style="text-align: center; max-width: 650px; margin: 0 auto;">
+          <span class="section-tagline">Studio Principles</span>
+          <h2 class="section-heading">Our Three Inviolable Standards</h2>
+          <p class="section-subtext" style="margin: 0 auto;">
+            How we protect the purity and integrity of your practice during every single session.
+          </p>
+        </div>
+
+        <div class="standards-grid">
+          <!-- Standard 1 -->
+          <article class="standard-card">
+            <div class="standard-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+            </div>
+            <h3 class="standard-title">Authentic Apparatus</h3>
+            <p class="standard-desc">
+              We exclusively commission solid rock maple wood reformers equipped with traditional dual-gauge steel
+              springs for consistent neuromuscular resistance.
+            </p>
+          </article>
+
+          <!-- Standard 2 -->
+          <article class="standard-card">
+            <div class="standard-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h3 class="standard-title">Capped Intimate Pods</h3>
+            <p class="standard-desc">
+              Group reformer sessions are strictly limited to eight students, ensuring every posture, foot placement,
+              and ribcage flare is visually corrected.
+            </p>
+          </article>
+
+          <!-- Standard 3 -->
+          <article class="standard-card">
+            <div class="standard-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+              </svg>
+            </div>
+            <h3 class="standard-title">Somatic Regulation</h3>
+            <p class="standard-desc">
+              We eliminate loud distracting music, harsh spotlights, and high-adrenaline shouting. Our space prioritizes
+              nervous system grounding and breath coherence.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- -----------------------------------------------------------------------
+         SECTION 04: SENSORY ARCHITECTURE (Visual Split Grid)
+         ----------------------------------------------------------------------- -->
+    <section class="about-sensory-section" id="about-sensory">
+      <div class="section-container">
+        <div class="sensory-grid">
+          <!-- Media Column -->
+          <div class="sensory-media-frame">
+            <img src="assets/images/about/p26.jpg"
+              alt="Natural daylight filtering into peaceful Pilates reformer studio room">
+          </div>
+
+          <!-- Content Column -->
+          <div>
+            <span class="section-tagline">Environmental Wellness</span>
+            <h2 class="section-heading">Designed for Sensory Stillness</h2>
+            <p class="section-subtext">
+              The architecture of our studio was carefully calculated to support internal focus from the moment you take
+              off your shoes.
+            </p>
+
+            <div class="sensory-points-list">
+              <div class="sensory-point-item">
+                <div class="sensory-point-dot"></div>
+                <div>
+                  <h3 class="sensory-point-title">Acoustic Dampening & Serenity</h3>
+                  <p class="sensory-point-desc">Triple-glazed sound dampening keeps street noise outside so you can
+                    listen to your instructor's breath cues.</p>
+                </div>
+              </div>
+
+              <div class="sensory-point-item">
+                <div class="sensory-point-dot"></div>
+                <div>
+                  <h3 class="sensory-point-title">Circadian Warmth & Natural Light</h3>
+                  <p class="sensory-point-desc">Frosted floor-to-ceiling windows diffuse natural daylight, preventing
+                    harsh glare while maintaining connection to natural cycles.</p>
+                </div>
+              </div>
+
+              <div class="sensory-point-item">
+                <div class="sensory-point-dot"></div>
+                <div>
+                  <h3 class="sensory-point-title">Medical-Grade Hygiene Standards</h3>
+                  <p class="sensory-point-desc">Antimicrobial vinyl leather and continuous HEPA filtration guarantee
+                    pristine apparatus surfaces for each class.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- -----------------------------------------------------------------------
+         SECTION 05: CONSULTATION CTA (Warm Champagne Centered Card)
+         ----------------------------------------------------------------------- -->
+    <section class="about-cta-section" id="about-consultation">
+      <div class="section-container">
+        <div class="consultation-cta-card">
+          <span class="consultation-tag">Personalized Consultation</span>
+          <h2 class="consultation-heading">Experience Private Postural Assessment</h2>
+          <p class="consultation-desc">
+            Book an intimate 45-minute private evaluation with a senior master instructor. We map spinal alignment,
+            assess core balance, and tailor your reformer pathway.
+          </p>
+
+          <div class="consultation-actions">
+            <a href="dashboard.html" class="btn-primary">
+              <span>Book Assessment Slot</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" style="width: 18px; height: 18px;" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="classes.html" class="btn-secondary">
+              <span>Explore Class Levels</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       5. Shared Footer (Unified 1200px Container)
+       ========================================================================= -->
+  <footer class="site-footer" id="site-footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <!-- Brand Summary Column -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="footer-brand-header" aria-label="Pilates Studio Home">
+            <img src="assets/images/icons/logo.png" alt="Pilates Studio Logo" class="footer-brand-logo">
+            <div>
+              <div class="footer-brand-title">Pilates Studio</div>
+              <div class="footer-brand-sub">Mindful Movement</div>
+            </div>
+          </a>
+          <p class="footer-desc">
+            A sanctuary dedicated to classical reformer Pilates, intentional breathwork, and alignment. Cultivating
+            physical strength and internal balance through mindful practice.
+          </p>
+          <div class="footer-socials" aria-label="Social Media Links">
+            <a href="#" class="footer-social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                </path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="footer-col-title">Navigation</h3>
+          <ul class="footer-nav-list">
+            <li><a href="index.html" class="footer-nav-link">Home 1 (Classic)</a></li>
+            <li><a href="home-2.html" class="footer-nav-link">Home 2 (Editorial)</a></li>
+            <li><a href="about.html" class="footer-nav-link">Our Studio Story</a></li>
+            <li><a href="classes.html" class="footer-nav-link">Reformer Classes</a></li>
+            <li><a href="membership.html" class="footer-nav-link">Packages & Passes</a></li>
+            <li><a href="contact.html" class="footer-nav-link">Contact & Location</a></li>
+          </ul>
+        </div>
+
+        <!-- Member Hub -->
+        <div>
+          <h3 class="footer-col-title">Member Hub</h3>
+          <ul class="footer-nav-list">
+            <li><a href="login.html" class="footer-nav-link">Member Portal</a></li>
+            <li><a href="dashboard.html" class="footer-nav-link">Slot Booking</a></li>
+            <li><a href="dashboard.html#packs" class="footer-nav-link">Track Class Packs</a></li>
+            <li><a href="dashboard.html#renew" class="footer-nav-link">Membership Renewal</a></li>
+            <li><a href="classes.html#levels" class="footer-nav-link">Skill Level Guide</a></li>
+          </ul>
+        </div>
+
+        <!-- Studio Location & Schedule -->
+        <div>
+          <h3 class="footer-col-title">Studio Location</h3>
+          <div class="footer-contact-info">
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>742 Serenity Boulevard, Sanctuary Arts District, Suite 400</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
+              <span>+1 (800) 412-STUDIO</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="21" y1="10" x2="22" y2="10"></line>
+              </svg>
+              <span>Mon – Sat: 6:30 AM – 8:30 PM<br>Sun: 8:00 AM – 4:00 PM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Pilates Studio. All rights reserved. Mindful movement & classical reformer.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          <a href="#" class="footer-bottom-link">Terms of Service</a>
+          <a href="#" class="footer-bottom-link">Studio Etiquette</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       6. Scroll To Top Floating Button
+       ========================================================================= -->
+  <button type="button" id="scroll-to-top" aria-label="Scroll back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+      stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- External JavaScript (Zero Inline JS) -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

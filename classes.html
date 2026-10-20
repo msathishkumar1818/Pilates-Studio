@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reformer Classes by Level — Pilates Studio</title>
+  <meta name="description"
+    content="Explore classical reformer Pilates classes organized by skill level. Level 1 Foundations, Level 2 Dynamic Flow, and Level 3 Classical Mastery.">
+  <link rel="icon" type="image/png" href="assets/images/icons/logo.png">
+
+  <!-- External Stylesheets (Zero Inline CSS) -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+
+  <!-- =========================================================================
+       1. Branded Preloader
+       ========================================================================= -->
+  <div id="page-preloader" aria-label="Loading Pilates Studio">
+    <div class="loader-brand-wrapper">
+      <div class="loader-logo-container">
+        <div class="loader-ring"></div>
+        <img src="assets/images/icons/logo.png" alt="Pilates Studio Logo" class="loader-logo-img">
+      </div>
+      <h2 class="loader-title">Pilates Studio</h2>
+      <p class="loader-sub">Reformer Curriculum &bull; Skill Levels</p>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       2. Fixed Slim Single-Line Header (Unified 1200px Container)
+       ========================================================================= -->
+  <header class="site-header" id="site-header">
+    <div class="header-container">
+      <!-- Logo + Brand Title -->
+      <a href="index.html" class="brand-link" aria-label="Pilates Studio Homepage">
+        <img src="assets/images/icons/logo.png" alt="Pilates Studio Logo" class="brand-logo-img">
+        <div class="brand-text-group">
+          <span class="brand-name">Pilates Studio</span>
+          <span class="brand-subtitle">Mindful Movement</span>
+        </div>
+      </a>
+
+      <!-- Exactly 6 Desktop Primary Navigation Items (One Line) -->
+      <nav class="desktop-nav" aria-label="Primary Desktop Navigation">
+        <ul class="nav-list">
+          <!-- 1. Home with Click-Only Dropdown -->
+          <li class="nav-item has-dropdown">
+            <button type="button" class="nav-link dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              <span>Home</span>
+              <svg class="dropdown-toggle-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                  clip-rule="evenodd" />
+              </svg>
+            </button>
+            <ul class="dropdown-menu" aria-label="Home Variations">
+              <li>
+                <a href="index.html" class="dropdown-link">
+                  <span>Home 1</span>
+                  <span class="dropdown-badge">Classic</span>
+                </a>
+              </li>
+              <li>
+                <a href="home-2.html" class="dropdown-link">
+                  <span>Home 2</span>
+                  <span class="dropdown-badge">Editorial</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- 2. About -->
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About</a>
+          </li>
+
+          <!-- 3. Classes (Active) -->
+          <li class="nav-item">
+            <a href="classes.html" class="nav-link active">Classes</a>
+          </li>
+
+          <!-- 4. Memberships -->
+          <li class="nav-item">
+            <a href="membership.html" class="nav-link">Memberships</a>
+          </li>
+
+          <!-- 5. Dashboard -->
+          <li class="nav-item">
+            <a href="dashboard.html" class="nav-link">Dashboard</a>
+          </li>
+
+          <!-- 6. Contact (Directly Visible) -->
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Header Action Controls: RTL, Dark Mode, Compact Login & Primary CTA -->
+      <div class="header-actions">
+        <!-- RTL/LTR Toggle -->
+        <button type="button" class="action-icon-btn rtl-toggle-btn" aria-label="Switch text direction">
+          <span class="rtl-label">RTL</span>
+        </button>
+
+        <!-- Dark Mode Toggle (#000000 Strict Base) -->
+        <button type="button" class="action-icon-btn theme-toggle-btn" aria-label="Switch color theme">
+          <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- Compact Member Login Button -->
+        <a href="login.html" class="header-login-btn" aria-label="Member portal login">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+            <polyline points="10 17 15 12 10 7"></polyline>
+            <line x1="15" y1="12" x2="3" y2="12"></line>
+          </svg>
+          <span>Login</span>
+        </a>
+
+        <!-- Primary Header CTA Button -->
+        <a href="classes.html" class="header-cta-btn" aria-label="Book a reformer class">
+          <span>Book Class</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="mobile-toggle-btn" id="mobile-menu-toggle" aria-label="Open mobile menu"
+          aria-expanded="false" aria-controls="mobile-drawer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       3. Mobile Navigation Drawer & Accordion
+       ========================================================================= -->
+  <div class="mobile-menu-backdrop" id="mobile-backdrop"></div>
+
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation Menu">
+    <!-- Drawer Brand Header -->
+    <div class="drawer-header">
+      <div class="drawer-brand">
+        <img src="assets/images/icons/logo.png" alt="Pilates Studio Logo" class="drawer-brand-img">
+        <div>
+          <div class="drawer-brand-name">Pilates Studio</div>
+          <div class="drawer-brand-sub">Mindful Movement</div>
+        </div>
+      </div>
+      <button type="button" class="drawer-close-btn" id="mobile-drawer-close" aria-label="Close mobile menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" style="width: 20px; height: 20px;" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Drawer Controls (Dark Mode & RTL) -->
+    <div class="drawer-controls">
+      <span class="drawer-control-label">Preferences</span>
+      <div class="drawer-control-group">
+        <button type="button" class="action-icon-btn rtl-toggle-btn" aria-label="Switch text direction">
+          <span class="rtl-label">RTL</span>
+        </button>
+        <button type="button" class="action-icon-btn theme-toggle-btn" aria-label="Switch color theme">
+          <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Drawer Navigation List -->
+    <ul class="mobile-nav-list">
+      <!-- 1. Home with Mobile Accordion (Click only) -->
+      <li class="mobile-nav-item">
+        <button type="button" class="mobile-nav-link accordion-toggle" aria-expanded="false">
+          <span>Home</span>
+          <svg class="accordion-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd"
+              d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+              clip-rule="evenodd" />
+          </svg>
+        </button>
+        <ul class="mobile-submenu">
+          <li>
+            <a href="index.html" class="mobile-sub-link">
+              <span>Home 1 (Classic)</span>
+            </a>
+          </li>
+          <li>
+            <a href="home-2.html" class="mobile-sub-link">
+              <span>Home 2 (Editorial)</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- 2. About -->
+      <li class="mobile-nav-item">
+        <a href="about.html" class="mobile-nav-link">About</a>
+      </li>
+
+      <!-- 3. Classes (Active) -->
+      <li class="mobile-nav-item">
+        <a href="classes.html" class="mobile-nav-link active">Classes</a>
+      </li>
+
+      <!-- 4. Memberships -->
+      <li class="mobile-nav-item">
+        <a href="membership.html" class="mobile-nav-link">Memberships</a>
+      </li>
+
+      <!-- 5. Dashboard -->
+      <li class="mobile-nav-item">
+        <a href="dashboard.html" class="mobile-nav-link">Member Dashboard</a>
+      </li>
+
+      <!-- 6. Contact -->
+      <li class="mobile-nav-item">
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+      </li>
+    </ul>
+
+    <!-- Drawer Footer with CTA & Login Buttons -->
+    <div class="drawer-footer">
+      <a href="classes.html" class="mobile-cta-btn">
+        <span>Book Reformer Class</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" aria-hidden="true">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </a>
+      <a href="login.html" class="mobile-login-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" aria-hidden="true">
+          <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+          <polyline points="10 17 15 12 10 7"></polyline>
+          <line x1="15" y1="12" x2="3" y2="12"></line>
+        </svg>
+        <span>Member Portal Login</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       MAIN CONTENT: EXACTLY 5 CONTENT SECTIONS FOR INNER PAGE 02 (CLASSES)
+       ========================================================================= -->
+  <main class="main-content" id="main-content">
+
+    <!-- -----------------------------------------------------------------------
+         SECTION 01: HERO (Background Image with Centered Text Overlay)
+         ----------------------------------------------------------------------- -->
+    <section class="page-hero-banner page-hero-classes" id="classes-hero">
+      <div class="section-container">
+        <div class="page-hero-content">
+          <span class="page-hero-tagline">Progressive Curriculum</span>
+          <h1 class="page-hero-title">
+            Classical Reformer Pathways by Skill Level
+          </h1>
+          <p class="page-hero-subtext">
+            Whether laying your postural foundations or executing intricate classical sequences, our 3-tiered curriculum
+            ensures safety, progression, and biomechanical precision.
+          </p>
+          <div class="page-hero-actions">
+            <a href="#tiers" class="btn-primary">
+              <span>Explore Skill Tiers</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <polyline points="19 12 12 19 5 12"></polyline>
+              </svg>
+            </a>
+            <a href="#pathways" class="btn-secondary">
+              <span>Specialized Care</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- -----------------------------------------------------------------------
+         SECTION 02: THE 3 CORE TIERS (Horizontal Showcase Ribbons)
+         ----------------------------------------------------------------------- -->
+    <section class="classes-tiers-section" id="tiers">
+      <div class="section-container">
+        <div class="classes-tiers-header">
+          <span class="section-tagline">Skill Classification</span>
+          <h2 class="section-heading">Choose Your Working Level</h2>
+          <p class="section-subtext">
+            Dedicated instructor adjustments with capped group sizes of maximum eight practitioners.
+          </p>
+        </div>
+
+        <div class="tier-ribbons-list">
+          <!-- Tier 1 -->
+          <article class="tier-ribbon-card">
+            <div class="tier-ribbon-media">
+              <img src="assets/images/services/p27.jpg" alt="Level 1 Foundation classical footwork mechanics"
+                class="tier-ribbon-img" loading="lazy">
+              <span class="tier-ribbon-number">01</span>
+            </div>
+            <div class="tier-ribbon-content">
+              <div class="tier-ribbon-top">
+                <div class="tier-ribbon-meta">
+                  <span class="tier-ribbon-badge">Tier 01</span>
+                  <span class="tier-ribbon-meta-text">50 Mins &bull; Beginners & All Levels</span>
+                </div>
+                <h3 class="tier-ribbon-title">Level 1: Foundations</h3>
+                <p class="tier-ribbon-desc">
+                  Master carriage mechanics, neutral pelvic alignment, and foundational spring calibration.
+                </p>
+              </div>
+              <div class="tier-ribbon-footer">
+                <div class="tier-ribbon-chips">
+                  <span class="tier-chip">Footwork &amp; Spine</span>
+                  <span class="tier-chip">Pelvic Alignment</span>
+                  <span class="tier-chip">Carriage Safety</span>
+                </div>
+                <a href="dashboard.html" class="tier-ribbon-btn">
+                  <span>Book Class</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Tier 2 -->
+          <article class="tier-ribbon-card">
+            <div class="tier-ribbon-media">
+              <img src="assets/images/services/p28.jpg" alt="Level 2 Dynamic Flow carriage intervals"
+                class="tier-ribbon-img" loading="lazy">
+              <span class="tier-ribbon-number">02</span>
+            </div>
+            <div class="tier-ribbon-content">
+              <div class="tier-ribbon-top">
+                <div class="tier-ribbon-meta">
+                  <span class="tier-ribbon-badge">Tier 02</span>
+                  <span class="tier-ribbon-meta-text">55 Mins &bull; Intermediate Movers</span>
+                </div>
+                <h3 class="tier-ribbon-title">Level 2: Dynamic Flow</h3>
+                <p class="tier-ribbon-desc">
+                  Elevated tempo with progressive tensions, balance challenges, and continuous core flow.
+                </p>
+              </div>
+              <div class="tier-ribbon-footer">
+                <div class="tier-ribbon-chips">
+                  <span class="tier-chip">Short Box Series</span>
+                  <span class="tier-chip">Kneeling Arm Springs</span>
+                  <span class="tier-chip">Tempo Sequences</span>
+                </div>
+                <a href="dashboard.html" class="tier-ribbon-btn">
+                  <span>Book Class</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Tier 3 -->
+          <article class="tier-ribbon-card">
+            <div class="tier-ribbon-media">
+              <img src="assets/images/services/p29.jpg" alt="Level 3 Classical Mastery overhead spinal carriage"
+                class="tier-ribbon-img" loading="lazy">
+              <span class="tier-ribbon-number">03</span>
+            </div>
+            <div class="tier-ribbon-content">
+              <div class="tier-ribbon-top">
+                <div class="tier-ribbon-meta">
+                  <span class="tier-ribbon-badge">Tier 03</span>
+                  <span class="tier-ribbon-meta-text">60 Mins &bull; Advanced Practitioners</span>
+                </div>
+                <h3 class="tier-ribbon-title">Level 3: Classical Mastery</h3>
+                <p class="tier-ribbon-desc">
+                  Demanding classical repertoire requiring core powerhouse control and inverted balance.
+                </p>
+              </div>
+              <div class="tier-ribbon-footer">
+                <div class="tier-ribbon-chips">
+                  <span class="tier-chip">Overhead Jackknife</span>
+                  <span class="tier-chip">Tendon Stretch</span>
+                  <span class="tier-chip">Classical Order</span>
+                </div>
+                <a href="dashboard.html" class="tier-ribbon-btn">
+                  <span>Book Class</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- -----------------------------------------------------------------------
+         SECTION 03: SPECIALIZED PRACTICE PATHWAYS (Cinematic Full-Bleed Showcase)
+         ----------------------------------------------------------------------- -->
+    <section class="classes-pathways-section" id="pathways">
+      <div class="section-container">
+        <div class="classes-pathways-header">
+          <span class="section-tagline">Targeted Focus</span>
+          <h2 class="section-heading">Specialized Practice Pathways</h2>
+          <p class="section-subtext">
+            Tailored programs crafted for unique rehabilitation needs, perinatal care, and private master mentorship.
+          </p>
+        </div>
+
+        <div class="pathways-cinematic-grid">
+          <!-- Pathway 1 -->
+          <article class="pathway-cinematic-card">
+            <img src="assets/images/services/pathway-prenatal.jpg"
+              alt="Gentle prenatal reformer Pilates instruction with spring support" class="pathway-cinematic-bg"
+              loading="lazy">
+            <div class="pathway-cinematic-overlay">
+              <div class="pathway-cinematic-top">
+                <span class="pathway-cinematic-badge">Perinatal Protocol</span>
+                <span class="pathway-cinematic-num">01</span>
+              </div>
+              <div class="pathway-cinematic-content">
+                <span class="pathway-cinematic-meta">Perinatal Care &bull; Trimester-Safe</span>
+                <h3 class="pathway-cinematic-title">Prenatal &amp; Postnatal Reformer</h3>
+                <p class="pathway-cinematic-desc">
+                  Gentle incline positioning and therapeutic spring support protecting the pelvic floor and abdominal
+                  wall across all trimesters.
+                </p>
+                <div class="pathway-cinematic-chips">
+                  <span class="pathway-chip">Pelvic Floor</span>
+                  <span class="pathway-chip">Incline Carriage</span>
+                  <span class="pathway-chip">Core Rehab</span>
+                </div>
+                <a href="contact.html" class="pathway-cinematic-btn">
+                  <span>Inquire Perinatal Care</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Pathway 2 -->
+          <article class="pathway-cinematic-card">
+            <img src="assets/images/services/pathway-rehab.jpg"
+              alt="Therapeutic spinal decompression and rehabilitation on Cadillac" class="pathway-cinematic-bg"
+              loading="lazy">
+            <div class="pathway-cinematic-overlay">
+              <div class="pathway-cinematic-top">
+                <span class="pathway-cinematic-badge">Clinical Rehabilitation</span>
+                <span class="pathway-cinematic-num">02</span>
+              </div>
+              <div class="pathway-cinematic-content">
+                <span class="pathway-cinematic-meta">Clinical Care &bull; Physician </span>
+                <h3 class="pathway-cinematic-title">Post Spinal Decompression</h3>
+                <p class="pathway-cinematic-desc">
+                  Physician-coordinated private sessions focusing on herniated disc relief, scoliosis stabilization, and
+                  shoulder cuff rehabilitation.
+                </p>
+                <div class="pathway-cinematic-chips">
+                  <span class="pathway-chip">Disc Relief</span>
+                  <span class="pathway-chip">Scoliosis Care</span>
+                  <span class="pathway-chip">Spring Traction</span>
+                </div>
+                <a href="contact.html" class="pathway-cinematic-btn">
+                  <span>Inquire Clinical Care</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Pathway 3 -->
+          <article class="pathway-cinematic-card">
+            <img src="assets/images/services/pathway-master.jpg" alt="1-on-1 Master Intensive Private Pilates session"
+              class="pathway-cinematic-bg" loading="lazy">
+            <div class="pathway-cinematic-overlay">
+              <div class="pathway-cinematic-top">
+                <span class="pathway-cinematic-badge">Private Mentorship</span>
+                <span class="pathway-cinematic-num">03</span>
+              </div>
+              <div class="pathway-cinematic-content">
+                <span class="pathway-cinematic-meta">VIP Intensive &bull; Full Apparatus Suite</span>
+                <h3 class="pathway-cinematic-title">1-on-1 Master Intensive Privates</h3>
+                <p class="pathway-cinematic-desc">
+                  Exclusive 60-minute sessions across the full suite (Reformer, Cadillac, Chair, and Barrel) tailored to
+                  your individual biomechanics.
+                </p>
+                <div class="pathway-cinematic-chips">
+                  <span class="pathway-chip">Cadillac &amp; Chair</span>
+                  <span class="pathway-chip">Biomechanics</span>
+                  <span class="pathway-chip">Private Suite</span>
+                </div>
+                <a href="dashboard.html" class="pathway-cinematic-btn">
+                  <span>Book Master Private</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- -----------------------------------------------------------------------
+         SECTION 04: PREPARATION & ETIQUETTE (2-Column Feature)
+         ----------------------------------------------------------------------- -->
+    <section class="classes-etiquette-section" id="etiquette">
+      <div class="section-container">
+        <div class="etiquette-grid">
+          <div class="etiquette-media">
+            <img src="assets/images/services/p30.jpg" alt="Reformer apparatus springs, clean straps, and fresh towels">
+          </div>
+
+          <div>
+            <span class="section-tagline">Studio Etiquette</span>
+            <h2 class="section-heading">Preparing for Your Studio Session</h2>
+            <p class="section-subtext">
+              Help us maintain a peaceful, hygienic sanctuary by reviewing our standard arrival recommendations.
+            </p>
+
+            <div class="etiquette-steps-list">
+              <div class="etiquette-step-item">
+                <span class="etiquette-step-num">01</span>
+                <div>
+                  <h3 class="etiquette-step-title">Arrive 10&ndash;15 Minutes Prior</h3>
+                  <p class="etiquette-step-desc">Allows time to check in at reception, secure personal items in lockers,
+                    and hydrate before the carriage warms up.</p>
+                </div>
+              </div>
+
+              <div class="etiquette-step-item">
+                <span class="etiquette-step-num">02</span>
+                <div>
+                  <h3 class="etiquette-step-title">Grip Socks Are Mandatory</h3>
+                  <p class="etiquette-step-desc">For hygiene and foot stability on the carriage footbar. Premium studio
+                    grip socks are available at the front desk.</p>
+                </div>
+              </div>
+
+              <div class="etiquette-step-item">
+                <span class="etiquette-step-num">03</span>
+                <div>
+                  <h3 class="etiquette-step-title">Inform Instructor of Current Injuries</h3>
+                  <p class="etiquette-step-desc">Notify your educator before class so they can provide spring
+                    modifications or headrest adjustments seamlessly.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- -----------------------------------------------------------------------
+         SECTION 05: LEVEL MATCHING CTA (Warm Champagne Banner)
+         ----------------------------------------------------------------------- -->
+    <section class="classes-cta-section" id="classes-cta">
+      <div class="section-container">
+        <div class="level-matching-card">
+          <span class="level-badge-tag">Find Your Flow</span>
+          <h2 class="level-cta-heading">Not Sure Which Level Suits You Best?</h2>
+          <p class="level-cta-desc">
+            Take our quick 2-minute movement questionnaire or book a 20-minute posture consultation with a senior
+            teacher to ensure the perfect reformer tier match.
+          </p>
+
+          <div class="level-cta-actions">
+            <a href="dashboard.html" class="btn-primary">
+              <span>Book Slot on Member Dashboard</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" style="width: 18px; height: 18px;" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="membership.html" class="btn-secondary">
+              <span>View Class Packs & Passes</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       5. Shared Footer (Unified 1200px Container)
+       ========================================================================= -->
+  <footer class="site-footer" id="site-footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <!-- Brand Summary Column -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="footer-brand-header" aria-label="Pilates Studio Home">
+            <img src="assets/images/icons/logo.png" alt="Pilates Studio Logo" class="footer-brand-logo">
+            <div>
+              <div class="footer-brand-title">Pilates Studio</div>
+              <div class="footer-brand-sub">Mindful Movement</div>
+            </div>
+          </a>
+          <p class="footer-desc">
+            A sanctuary dedicated to classical reformer Pilates, intentional breathwork, and alignment. Cultivating
+            physical strength and internal balance through mindful practice.
+          </p>
+          <div class="footer-socials" aria-label="Social Media Links">
+            <a href="#" class="footer-social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                </path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="footer-col-title">Navigation</h3>
+          <ul class="footer-nav-list">
+            <li><a href="index.html" class="footer-nav-link">Home 1 (Classic)</a></li>
+            <li><a href="home-2.html" class="footer-nav-link">Home 2 (Editorial)</a></li>
+            <li><a href="about.html" class="footer-nav-link">Our Studio Story</a></li>
+            <li><a href="classes.html" class="footer-nav-link">Reformer Classes</a></li>
+            <li><a href="membership.html" class="footer-nav-link">Packages & Passes</a></li>
+            <li><a href="contact.html" class="footer-nav-link">Contact & Location</a></li>
+          </ul>
+        </div>
+
+        <!-- Member Hub -->
+        <div>
+          <h3 class="footer-col-title">Member Hub</h3>
+          <ul class="footer-nav-list">
+            <li><a href="login.html" class="footer-nav-link">Member Portal</a></li>
+            <li><a href="dashboard.html" class="footer-nav-link">Slot Booking</a></li>
+            <li><a href="dashboard.html#packs" class="footer-nav-link">Track Class Packs</a></li>
+            <li><a href="dashboard.html#renew" class="footer-nav-link">Membership Renewal</a></li>
+            <li><a href="classes.html#tiers" class="footer-nav-link">Skill Level Guide</a></li>
+          </ul>
+        </div>
+
+        <!-- Studio Location & Schedule -->
+        <div>
+          <h3 class="footer-col-title">Studio Location</h3>
+          <div class="footer-contact-info">
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>742 Serenity Boulevard, Sanctuary Arts District, Suite 400</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
+              <span>+1 (800) 412-STUDIO</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="21" y1="10" x2="22" y2="10"></line>
+              </svg>
+              <span>Mon – Sat: 6:30 AM – 8:30 PM<br>Sun: 8:00 AM – 4:00 PM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Pilates Studio. All rights reserved. Mindful movement & classical reformer.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          <a href="#" class="footer-bottom-link">Terms of Service</a>
+          <a href="#" class="footer-bottom-link">Studio Etiquette</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       6. Scroll To Top Floating Button
+       ========================================================================= -->
+  <button type="button" id="scroll-to-top" aria-label="Scroll back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+      stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- External JavaScript (Zero Inline JS) -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

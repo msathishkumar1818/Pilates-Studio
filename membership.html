@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memberships & Packages — Pilates Studio</title>
+  <meta name="description"
+    content="Discover flexible reformer class packs and unlimited monthly memberships at Pilates Studio. Seamless slot booking and usage tracking on your Member Dashboard.">
+  <link rel="icon" type="image/png" href="assets/images/icons/logo.png">
+
+  <!-- External Stylesheets (Zero Inline CSS) -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+
+  <!-- =========================================================================
+       1. Branded Preloader
+       ========================================================================= -->
+  <div id="page-preloader" aria-label="Loading Pilates Studio">
+    <div class="loader-brand-wrapper">
+      <div class="loader-logo-container">
+        <div class="loader-ring"></div>
+        <img src="assets/images/icons/logo.png" alt="Pilates Studio Logo" class="loader-logo-img">
+      </div>
+      <h2 class="loader-title">Pilates Studio</h2>
+      <p class="loader-sub">Memberships &bull; Flexible Passes</p>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       2. Fixed Slim Single-Line Header (Unified 1200px Container)
+       ========================================================================= -->
+  <header class="site-header" id="site-header">
+    <div class="header-container">
+      <!-- Logo + Brand Title -->
+      <a href="index.html" class="brand-link" aria-label="Pilates Studio Homepage">
+        <img src="assets/images/icons/logo.png" alt="Pilates Studio Logo" class="brand-logo-img">
+        <div class="brand-text-group">
+          <span class="brand-name">Pilates Studio</span>
+          <span class="brand-subtitle">Mindful Movement</span>
+        </div>
+      </a>
+
+      <!-- Exactly 6 Desktop Primary Navigation Items (One Line) -->
+      <nav class="desktop-nav" aria-label="Primary Desktop Navigation">
+        <ul class="nav-list">
+          <!-- 1. Home with Click-Only Dropdown -->
+          <li class="nav-item has-dropdown">
+            <button type="button" class="nav-link dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              <span>Home</span>
+              <svg class="dropdown-toggle-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                  clip-rule="evenodd" />
+              </svg>
+            </button>
+            <ul class="dropdown-menu" aria-label="Home Variations">
+              <li>
+                <a href="index.html" class="dropdown-link">
+                  <span>Home 1</span>
+                  <span class="dropdown-badge">Classic</span>
+                </a>
+              </li>
+              <li>
+                <a href="home-2.html" class="dropdown-link">
+                  <span>Home 2</span>
+                  <span class="dropdown-badge">Editorial</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- 2. About -->
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About</a>
+          </li>
+
+          <!-- 3. Classes -->
+          <li class="nav-item">
+            <a href="classes.html" class="nav-link">Classes</a>
+          </li>
+
+          <!-- 4. Memberships (Active) -->
+          <li class="nav-item">
+            <a href="membership.html" class="nav-link active">Memberships</a>
+          </li>
+
+          <!-- 5. Dashboard -->
+          <li class="nav-item">
+            <a href="dashboard.html" class="nav-link">Dashboard</a>
+          </li>
+
+          <!-- 6. Contact (Directly Visible) -->
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Header Action Controls: RTL, Dark Mode, Compact Login & Primary CTA -->
+      <div class="header-actions">
+        <!-- RTL/LTR Toggle -->
+        <button type="button" class="action-icon-btn rtl-toggle-btn" aria-label="Switch text direction">
+          <span class="rtl-label">RTL</span>
+        </button>
+
+        <!-- Dark Mode Toggle (#000000 Strict Base) -->
+        <button type="button" class="action-icon-btn theme-toggle-btn" aria-label="Switch color theme">
+          <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- Compact Member Login Button -->
+        <a href="login.html" class="header-login-btn" aria-label="Member portal login">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+            <polyline points="10 17 15 12 10 7"></polyline>
+            <line x1="15" y1="12" x2="3" y2="12"></line>
+          </svg>
+          <span>Login</span>
+        </a>
+
+        <!-- Primary Header CTA Button -->
+        <a href="classes.html" class="header-cta-btn" aria-label="Book a reformer class">
+          <span>Book Class</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="mobile-toggle-btn" id="mobile-menu-toggle" aria-label="Open mobile menu"
+          aria-expanded="false" aria-controls="mobile-drawer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       3. Mobile Navigation Drawer & Accordion
+       ========================================================================= -->
+  <div class="mobile-menu-backdrop" id="mobile-backdrop"></div>
+
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation Menu">
+    <!-- Drawer Brand Header -->
+    <div class="drawer-header">
+      <div class="drawer-brand">
+        <img src="assets/images/icons/logo.png" alt="Pilates Studio Logo" class="drawer-brand-img">
+        <div>
+          <div class="drawer-brand-name">Pilates Studio</div>
+          <div class="drawer-brand-sub">Mindful Movement</div>
+        </div>
+      </div>
+      <button type="button" class="drawer-close-btn" id="mobile-drawer-close" aria-label="Close mobile menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" style="width: 20px; height: 20px;" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Drawer Controls (Dark Mode & RTL) -->
+    <div class="drawer-controls">
+      <span class="drawer-control-label">Preferences</span>
+      <div class="drawer-control-group">
+        <button type="button" class="action-icon-btn rtl-toggle-btn" aria-label="Switch text direction">
+          <span class="rtl-label">RTL</span>
+        </button>
+        <button type="button" class="action-icon-btn theme-toggle-btn" aria-label="Switch color theme">
+          <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Drawer Navigation List -->
+    <ul class="mobile-nav-list">
+      <!-- 1. Home with Mobile Accordion (Click only) -->
+      <li class="mobile-nav-item">
+        <button type="button" class="mobile-nav-link accordion-toggle" aria-expanded="false">
+          <span>Home</span>
+          <svg class="accordion-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd"
+              d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+              clip-rule="evenodd" />
+          </svg>
+        </button>
+        <ul class="mobile-submenu">
+          <li>
+            <a href="index.html" class="mobile-sub-link">
+              <span>Home 1 (Classic)</span>
+            </a>
+          </li>
+          <li>
+            <a href="home-2.html" class="mobile-sub-link">
+              <span>Home 2 (Editorial)</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- 2. About -->
+      <li class="mobile-nav-item">
+        <a href="about.html" class="mobile-nav-link">About</a>
+      </li>
+
+      <!-- 3. Classes -->
+      <li class="mobile-nav-item">
+        <a href="classes.html" class="mobile-nav-link">Classes</a>
+      </li>
+
+      <!-- 4. Memberships (Active) -->
+      <li class="mobile-nav-item">
+        <a href="membership.html" class="mobile-nav-link active">Memberships</a>
+      </li>
+
+      <!-- 5. Dashboard -->
+      <li class="mobile-nav-item">
+        <a href="dashboard.html" class="mobile-nav-link">Member Dashboard</a>
+      </li>
+
+      <!-- 6. Contact -->
+      <li class="mobile-nav-item">
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+      </li>
+    </ul>
+
+    <!-- Drawer Footer with CTA & Login Buttons -->
+    <div class="drawer-footer">
+      <a href="classes.html" class="mobile-cta-btn">
+        <span>Book Reformer Class</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" aria-hidden="true">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </a>
+      <a href="login.html" class="mobile-login-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" aria-hidden="true">
+          <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+          <polyline points="10 17 15 12 10 7"></polyline>
+          <line x1="15" y1="12" x2="3" y2="12"></line>
+        </svg>
+        <span>Member Portal Login</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       MAIN CONTENT: EXACTLY 5 CONTENT SECTIONS FOR INNER PAGE 03 (MEMBERSHIP)
+       ========================================================================= -->
+  <main class="main-content" id="main-content">
+
+    <!-- -----------------------------------------------------------------------
+         SECTION 01: HERO (Background Image with Centered Text Overlay)
+         ----------------------------------------------------------------------- -->
+    <section class="page-hero-banner page-hero-membership" id="membership-hero">
+      <div class="section-container">
+        <div class="page-hero-content">
+          <span class="page-hero-tagline">Commitment to Balance</span>
+          <h1 class="page-hero-title">
+            Thoughtful Memberships for Mindful Longevity
+          </h1>
+          <p class="page-hero-subtext">
+            Choose flexible multi-session packs or all-inclusive monthly passes. Every tier integrates seamlessly with
+            your online Member Dashboard for instantaneous booking and automated renewals.
+          </p>
+          <div class="page-hero-actions">
+            <a href="#pricing-tiers" class="btn-primary">
+              <span>Browse Package Tiers</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="dashboard.html" class="btn-secondary">
+              <span>Manage Existing Pack</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- -----------------------------------------------------------------------
+         SECTION 02: PRICING TIERS (Even 3-Card Architecture)
+         ----------------------------------------------------------------------- -->
+    <section class="membership-tiers-section" id="pricing-tiers">
+      <div class="section-container">
+        <div style="text-align: center; max-width: 650px; margin: 0 auto;">
+          <span class="section-tagline">Transparent Rates</span>
+          <h2 class="section-heading">Curated Passes & Memberships</h2>
+          <p class="section-subtext" style="margin: 0 auto;">
+            Zero hidden enrollment fees. Track your remaining classes and renewal dates in real time on the Member
+            Dashboard.
+          </p>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- Card 1 -->
+          <article class="pricing-card">
+            <div class="pricing-card-media">
+              <img src="assets/images/products/p31.jpg" alt="10-class classical reformer pass" class="pricing-card-img">
+              <span class="pricing-tag">Flexible Pack</span>
+            </div>
+            <div class="pricing-body">
+              <h3 class="pricing-title">10-Class Practice Pack</h3>
+              <div class="pricing-rate-wrap">
+                <span class="pricing-amount">$320</span>
+                <span class="pricing-period">/ 6-Month Expiry</span>
+              </div>
+              <p class="pricing-desc">
+                Ideal for movers balancing busy travel schedules while sustaining weekly reformer consistency.
+              </p>
+              <ul class="pricing-perks-list">
+                <li class="pricing-perk-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>10 Reformer or Mat Sessions</span>
+                </li>
+                <li class="pricing-perk-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Valid Across All 3 Skill Levels</span>
+                </li>
+                <li class="pricing-perk-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Full Dashboard Usage Tracking</span>
+                </li>
+                <li class="pricing-perk-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>10-Day Advance Booking Window</span>
+                </li>
+              </ul>
+              <div class="pricing-footer">
+                <a href="dashboard.html" class="pricing-select-btn">
+                  <span>Select 10-Class Pack</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="pricing-card popular">
+            <div class="pricing-card-media">
+              <img src="assets/images/products/p32.jpg" alt="Unlimited monthly reformer membership"
+                class="pricing-card-img">
+              <span class="pricing-tag" style="background: var(--color-primary);">Member Favorite</span>
+            </div>
+            <div class="pricing-body">
+              <h3 class="pricing-title">Unlimited Sanctuary Pass</h3>
+              <div class="pricing-rate-wrap">
+                <span class="pricing-amount">$285</span>
+                <span class="pricing-period">/ Month &bull; Auto-Renew</span>
+              </div>
+              <p class="pricing-desc">
+                Our flagship monthly membership for dedicated practitioners training three to five times per week.
+              </p>
+              <ul class="pricing-perks-list">
+                <li class="pricing-perk-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Unlimited Reformer & Mat Classes</span>
+                </li>
+                <li class="pricing-perk-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>14-Day Priority Dashboard Booking</span>
+                </li>
+                <li class="pricing-perk-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Complimentary Infrared Sauna Access</span>
+                </li>
+                <li class="pricing-perk-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>2 Guest Passes Every Month</span>
+                </li>
+              </ul>
+              <div class="pricing-footer">
+                <a href="dashboard.html" class="pricing-select-btn"
+                  style="background-color: var(--color-primary-hover);">
+                  <span>Join Unlimited Sanctuary</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="pricing-card">
+            <div class="pricing-card-media">
+              <img src="assets/images/products/p33.jpg" alt="Master private 1-on-1 reformer instruction"
+                class="pricing-card-img">
+              <span class="pricing-tag">Private Intensive</span>
+            </div>
+            <div class="pricing-body">
+              <h3 class="pricing-title">5-Session Private Duet</h3>
+              <div class="pricing-rate-wrap">
+                <span class="pricing-amount">$450</span>
+                <span class="pricing-period">/ 5 Private Hours</span>
+              </div>
+              <p class="pricing-desc">
+                Tailored 1-on-1 master instruction utilizing the full apparatus line (Cadillac, Chair, and Barrel).
+              </p>
+              <ul class="pricing-perks-list">
+                <li class="pricing-perk-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>5 Dedicated 60-Min Private Hours</span>
+                </li>
+                <li class="pricing-perk-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Full Postural Biomechanical Mapping</span>
+                </li>
+                <li class="pricing-perk-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Custom Apparatus Progression Plan</span>
+                </li>
+                <li class="pricing-perk-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Direct Instructor Slot Selection</span>
+                </li>
+              </ul>
+              <div class="pricing-footer">
+                <a href="dashboard.html" class="pricing-select-btn">
+                  <span>Book Private Duet Pack</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- -----------------------------------------------------------------------
+         SECTION 03: PRIVILEGES MATRIX (4-Part Feature)
+         ----------------------------------------------------------------------- -->
+    <section class="membership-privileges-section" id="privileges">
+      <div class="section-container">
+        <div style="text-align: center; max-width: 650px; margin: 0 auto;">
+          <span class="section-tagline">Sanctuary Amenities</span>
+          <h2 class="section-heading">Exclusive Member Privileges</h2>
+          <p class="section-subtext" style="margin: 0 auto;">
+            Designed to elevate your physical recovery before, during, and after every session.
+          </p>
+        </div>
+
+        <div class="privileges-quad-grid">
+          <!-- Privilege 1 -->
+          <div class="privilege-box">
+            <div class="privilege-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </div>
+            <h3 class="privilege-title">14-Day Advance Booking</h3>
+            <p class="privilege-desc">Secure peak morning and evening reformer spots before general reservation opens.
+            </p>
+          </div>
+
+          <!-- Privilege 2 -->
+          <div class="privilege-box">
+            <div class="privilege-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                <line x1="6" y1="1" x2="6" y2="4"></line>
+                <line x1="10" y1="1" x2="10" y2="4"></line>
+                <line x1="14" y1="1" x2="14" y2="4"></line>
+              </svg>
+            </div>
+            <h3 class="privilege-title">Infrared Sauna & Towels</h3>
+            <p class="privilege-desc">Complimentary post-practice infrared sauna sessions and eucalyptus-infused towel
+              service.</p>
+          </div>
+
+          <!-- Privilege 3 -->
+          <div class="privilege-box">
+            <div class="privilege-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 8v4l3 3"></path>
+              </svg>
+            </div>
+            <h3 class="privilege-title">Biomechanical Reviews</h3>
+            <p class="privilege-desc">Quarterly spine and hip mobility check-ins to monitor postural corrections and
+              carriage goals.</p>
+          </div>
+
+          <!-- Privilege 4 -->
+          <div class="privilege-box">
+            <div class="privilege-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h3 class="privilege-title">Monthly Guest Passes</h3>
+            <p class="privilege-desc">Bring a friend or partner to share the restorative power of mindful reformer
+              movement.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- -----------------------------------------------------------------------
+         SECTION 04: DIGITAL PORTAL (Visual Interface Split)
+         ----------------------------------------------------------------------- -->
+    <section class="membership-dashboard-section" id="dashboard-experience">
+      <div class="section-container">
+        <div class="portal-feature-grid">
+          <div class="portal-content-col">
+            <span class="section-tagline">Digital Ease</span>
+            <h2 class="section-heading">Frictionless Member Dashboard</h2>
+            <p class="section-subtext">
+              Manage your entire practice through our tailored member portal. Available 24/7 on desktop and mobile.
+            </p>
+
+            <div class="portal-features-list">
+              <div class="portal-feature-item">
+                <div class="portal-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="9 11 12 14 22 4"></polyline>
+                    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="portal-item-title">1-Click Slot Reservation</h3>
+                  <p class="portal-item-desc">Filter available reformer spots by your favorite instructor, skill tier,
+                    and preferred time window.</p>
+                </div>
+              </div>
+
+              <div class="portal-feature-item">
+                <div class="portal-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <line x1="18" y1="20" x2="18" y2="10"></line>
+                    <line x1="12" y1="20" x2="12" y2="4"></line>
+                    <line x1="6" y1="20" x2="6" y2="14"></line>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="portal-item-title">Live Class Pack Usage Meter</h3>
+                  <p class="portal-item-desc">Instantly see remaining passes, expiry countdowns, and historical
+                    attendance metrics.</p>
+                </div>
+              </div>
+
+              <div class="portal-feature-item">
+                <div class="portal-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                    <line x1="1" y1="10" x2="23" y2="10"></line>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="portal-item-title">Seamless Auto-Renewal Management</h3>
+                  <p class="portal-item-desc">Pause, upgrade, or adjust payment methods without having to wait in line
+                    at reception.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="portal-media-frame">
+            <img src="assets/images/products/p34.jpg"
+              alt="Member in serene studio lounge booking reformer class on device">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- -----------------------------------------------------------------------
+         SECTION 05: TRIAL PASS CTA (Warm Champagne Card)
+         ----------------------------------------------------------------------- -->
+    <section class="membership-cta-section" id="membership-cta">
+      <div class="section-container">
+        <div class="trial-cta-card">
+          <span class="trial-tag">New Practitioner Offer</span>
+          <h2 class="trial-heading">Begin with the 3-Class Induction Pass</h2>
+          <p class="trial-desc">
+            Experience our mindful environment, feel the Balanced Body spring resistance, and discover why members
+            consider our studio their second home.
+          </p>
+
+          <div class="trial-actions">
+            <a href="login.html" class="btn-primary">
+              <span>Register & Claim Pass</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" style="width: 18px; height: 18px;" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="dashboard.html" class="btn-secondary">
+              <span>View Dashboard Preview</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       5. Shared Footer (Unified 1200px Container)
+       ========================================================================= -->
+  <footer class="site-footer" id="site-footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <!-- Brand Summary Column -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="footer-brand-header" aria-label="Pilates Studio Home">
+            <img src="assets/images/icons/logo.png" alt="Pilates Studio Logo" class="footer-brand-logo">
+            <div>
+              <div class="footer-brand-title">Pilates Studio</div>
+              <div class="footer-brand-sub">Mindful Movement</div>
+            </div>
+          </a>
+          <p class="footer-desc">
+            A sanctuary dedicated to classical reformer Pilates, intentional breathwork, and alignment. Cultivating
+            physical strength and internal balance through mindful practice.
+          </p>
+          <div class="footer-socials" aria-label="Social Media Links">
+            <a href="#" class="footer-social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                </path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="footer-col-title">Navigation</h3>
+          <ul class="footer-nav-list">
+            <li><a href="index.html" class="footer-nav-link">Home 1 (Classic)</a></li>
+            <li><a href="home-2.html" class="footer-nav-link">Home 2 (Editorial)</a></li>
+            <li><a href="about.html" class="footer-nav-link">Our Studio Story</a></li>
+            <li><a href="classes.html" class="footer-nav-link">Reformer Classes</a></li>
+            <li><a href="membership.html" class="footer-nav-link">Packages & Passes</a></li>
+            <li><a href="contact.html" class="footer-nav-link">Contact & Location</a></li>
+          </ul>
+        </div>
+
+        <!-- Member Hub -->
+        <div>
+          <h3 class="footer-col-title">Member Hub</h3>
+          <ul class="footer-nav-list">
+            <li><a href="login.html" class="footer-nav-link">Member Portal</a></li>
+            <li><a href="dashboard.html" class="footer-nav-link">Slot Booking</a></li>
+            <li><a href="dashboard.html#packs" class="footer-nav-link">Track Class Packs</a></li>
+            <li><a href="dashboard.html#renew" class="footer-nav-link">Membership Renewal</a></li>
+            <li><a href="classes.html#tiers" class="footer-nav-link">Skill Level Guide</a></li>
+          </ul>
+        </div>
+
+        <!-- Studio Location & Schedule -->
+        <div>
+          <h3 class="footer-col-title">Studio Location</h3>
+          <div class="footer-contact-info">
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>742 Serenity Boulevard, Sanctuary Arts District, Suite 400</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
+              <span>+1 (800) 412-STUDIO</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="21" y1="10" x2="22" y2="10"></line>
+              </svg>
+              <span>Mon – Sat: 6:30 AM – 8:30 PM<br>Sun: 8:00 AM – 4:00 PM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Pilates Studio. All rights reserved. Mindful movement & classical reformer.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          <a href="#" class="footer-bottom-link">Terms of Service</a>
+          <a href="#" class="footer-bottom-link">Studio Etiquette</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       6. Scroll To Top Floating Button
+       ========================================================================= -->
+  <button type="button" id="scroll-to-top" aria-label="Scroll back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+      stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- External JavaScript (Zero Inline JS) -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
