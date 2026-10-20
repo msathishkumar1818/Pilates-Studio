@@ -680,7 +680,9 @@ button {
   right: 0;
   width: 86%;
   max-width: 360px;
-  height: 100vh;
+  height: 100%;
+  height: 100dvh;
+  max-height: 100dvh;
   background-color: var(--bg-body);
   border-left: 1px solid var(--border-color);
   z-index: 10001;
@@ -690,6 +692,8 @@ button {
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: -8px 0 32px rgba(0, 0, 0, 0.25);
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
 }
 
 .mobile-drawer.open {
@@ -713,8 +717,9 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.25rem 1.5rem;
+  padding: 1rem 1.25rem;
   border-bottom: 1px solid var(--border-color);
+  flex-shrink: 0;
 }
 
 .drawer-brand {
@@ -767,9 +772,10 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.85rem 1.5rem;
+  padding: 0.65rem 1.25rem;
   background-color: var(--bg-surface);
   border-bottom: 1px solid var(--border-color);
+  flex-shrink: 0;
 }
 
 .drawer-control-label {
@@ -786,10 +792,11 @@ button {
 
 .mobile-nav-list {
   list-style: none;
-  padding: 1rem 1.25rem;
+  padding: 0.65rem 1.15rem;
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 0.25rem;
+  flex-shrink: 0;
 }
 
 .mobile-nav-item {
@@ -800,8 +807,8 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.85rem 1rem;
-  font-size: 1rem;
+  padding: 0.7rem 0.9rem;
+  font-size: 0.95rem;
   font-weight: 500;
   color: var(--text-main);
   border-radius: 10px;
@@ -885,11 +892,13 @@ button {
 
 .drawer-footer {
   margin-top: auto;
-  padding: 1.25rem 1.5rem;
+  padding: 0.85rem 1.25rem calc(1rem + env(safe-area-inset-bottom, 0px));
   border-top: 1px solid var(--border-color);
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.55rem;
+  background-color: var(--bg-body);
+  flex-shrink: 0;
 }
 
 .mobile-cta-btn {
@@ -897,9 +906,9 @@ button {
   align-items: center;
   justify-content: center;
   gap: 0.6rem;
-  height: 48px;
-  min-height: 48px;
-  padding: 0 1.25rem;
+  height: 44px;
+  min-height: 44px;
+  padding: 0 1.15rem;
   background-color: var(--color-primary);
   color: #FFFFFF !important;
   border: 1px solid transparent;
@@ -939,27 +948,32 @@ button {
   align-items: center;
   justify-content: center;
   gap: 0.6rem;
-  height: 48px;
-  min-height: 48px;
-  padding: 0 1.25rem;
-  background-color: var(--bg-surface);
-  color: var(--text-main);
-  border: 1px solid var(--border-color);
+  height: 44px;
+  min-height: 44px;
+  padding: 0 1.15rem;
+  background-color: var(--color-primary-subtle);
+  color: var(--color-primary);
+  border: 1.5px solid var(--color-primary);
   border-radius: 12px;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.92rem;
   line-height: 1;
   text-align: center;
   text-decoration: none;
   box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(89, 107, 85, 0.12);
   transition: var(--transition-smooth);
 }
 
 .mobile-login-btn:hover,
 .mobile-login-btn.active-auth-state {
   border-color: var(--color-primary);
-  color: var(--color-primary);
-  background-color: var(--color-primary-subtle);
+  color: #FFFFFF !important;
+  background-color: var(--color-primary);
+}
+
+.mobile-login-btn:hover svg {
+  stroke: #FFFFFF;
 }
 
 .mobile-login-btn svg {
@@ -972,6 +986,59 @@ button {
   flex-shrink: 0 !important;
   display: inline-block;
   vertical-align: middle;
+  stroke: var(--color-primary);
+  transition: stroke 0.2s ease;
+}
+
+/* Dedicated Mobile Menu List Login Item */
+.mobile-nav-login-link {
+  background-color: var(--color-primary-subtle);
+  border: 1px solid rgba(89, 107, 85, 0.25);
+  font-weight: 600;
+  margin-top: 0.35rem;
+}
+
+.mobile-nav-login-link:hover {
+  background-color: var(--color-primary);
+  color: #FFFFFF !important;
+}
+
+.mobile-nav-login-link:hover .mobile-nav-icon {
+  stroke: #FFFFFF;
+}
+
+.mobile-nav-login-link:hover .mobile-login-badge {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+}
+
+.mobile-nav-link-content {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.mobile-nav-icon {
+  width: 18px;
+  height: 18px;
+  stroke: var(--color-primary);
+  flex-shrink: 0;
+  transition: stroke 0.2s ease;
+}
+
+.mobile-login-badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.2rem 0.55rem;
+  background-color: var(--bg-surface);
+  color: var(--color-primary);
+  border-radius: 9999px;
+  border: 1px solid var(--color-primary);
+  line-height: 1.1;
+  transition: all 0.2s ease;
 }
 
 /* ==========================================================================
