@@ -6139,7 +6139,7 @@ html.dark .contact-map-iframe {
 }
 
 .dash-mobile-sidebar-toggle {
-  display: inline-flex;
+  display: none;
 }
 
 .dash-brand-link {
